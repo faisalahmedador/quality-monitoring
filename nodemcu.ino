@@ -5,31 +5,27 @@
 #include <WiFiClientSecure.h>
 #include <ESP8266WebServer.h>
 
-unsigned long myChannelNumber = 896598;  // Replace the 0 with your channel number
-const char * myWriteAPIKey = "IK48GHVB1L1ND9JM";    // Paste your ThingSpeak Write API Key between the quotes
+unsigned long myChannelNumber = 0;  // Replace the 0 with your channel number
+const char * myWriteAPIKey = "";    // Paste your ThingSpeak Write API Key between the quotes
 //------------------------------------------------------------------
 
 WiFiClient client;
 
 #define HOSTIFTTT "maker.ifttt.com"
-#define EVENTO "ESP"
-#define IFTTTKEY "cbPx5g-V0gy3_qnKm9dA3eRhSEnFhduKttLAFnk-8jm"
+#define EVENTO "ESP" 
+#define IFTTTKEY "0" //replace 0 with the ifttt key
 
 
 ESP8266WebServer server;
 uint8_t pin_led = 4;
 bool led_status = LOW;
-/*char* ssid = "Lake Touch ";
-  char* password = "csenetwork";*/
 
 
 
-char* ssid = "CSE Network - 2.4G";
-char* password = "csenetwork";
+char* ssid = "";    //enter your wifi name
+char* password = ""; // enter your wifi password
 
 
-/*char* ssid = "fpsr";
-  char* password = "Bismillah";*/
 
 void setup()
 {
